@@ -1,0 +1,2 @@
+我是谢浓浓：2018-03-08 13:11:36.175 [main] ERROR com.rush.o2o.util.ImageUtil - java.io.FileNotFoundException: /home/xiangce/image/upload/item/shop/4/2018030813113137052.jpg (No such file or directory)
+我是谢浓浓：2018-03-08 13:26:25.544 [main] ERROR com.rush.o2o.util.ImageUtil - java.io.FileNotFoundException: /User/o2oRes/image/upload/item/shop/5/2018030813262212310.jpg (No such file or directory)
