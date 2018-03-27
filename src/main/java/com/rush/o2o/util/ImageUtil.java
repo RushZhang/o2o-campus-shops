@@ -53,7 +53,7 @@ public class ImageUtil {
 		logger.debug("current complete addr is :" + PathUtil.getImgBasePath() + relativeAddr);
 		logger.debug("basePath is :" + basePath);
 		try {
-			Thumbnails.of(thumbnailInputStream).size(200, 200).watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath + "/fox.png")), 0.25f).outputQuality(0.8f)
+			Thumbnails.of(thumbnailInputStream).size(200, 200).watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath + "/zhaizhai.png")), 0.65f).outputQuality(0.95f)
 			.toFile(dest);
 		} catch (IOException exception ) {
 			logger.error(exception.toString());

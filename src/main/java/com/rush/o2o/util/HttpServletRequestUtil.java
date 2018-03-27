@@ -35,19 +35,22 @@ public class HttpServletRequestUtil {
 				return false;
 		}
 	}
-	
 	public static String getString(HttpServletRequest request, String key) {
 		try {
 			String result = request.getParameter(key);
+			System.out.println("result: "+result+"\nkey: "+ key);
 			if (result != null) {
 				result = result.trim();
 			}
-			if ("".equals( result)) {
+			if ("".equals(result)) {
+			
 				result = null;
 			}
 			return result;
 		} catch (Exception e) {
+			System.out.println("UTIL出现了错误");
 			return null;
 		}
 	}
+	
 }
