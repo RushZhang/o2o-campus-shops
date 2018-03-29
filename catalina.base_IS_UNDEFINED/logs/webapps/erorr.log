@@ -1,2 +1,7 @@
-我是谢浓浓：2018-03-08 13:11:36.175 [main] ERROR com.rush.o2o.util.ImageUtil - java.io.FileNotFoundException: /home/xiangce/image/upload/item/shop/4/2018030813113137052.jpg (No such file or directory)
-我是谢浓浓：2018-03-08 13:26:25.544 [main] ERROR com.rush.o2o.util.ImageUtil - java.io.FileNotFoundException: /User/o2oRes/image/upload/item/shop/5/2018030813262212310.jpg (No such file or directory)
+我是谢浓浓：2018-03-28 14:42:41.393 [main] ERROR com.rush.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
+我是谢浓浓：2018-03-28 14:51:40.634 [main] ERROR com.rush.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
+我是谢浓浓：2018-03-28 15:05:18.790 [main] ERROR com.rush.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
+我是谢浓浓：2018-03-28 15:08:56.887 [main] ERROR com.rush.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
+我是谢浓浓：2018-03-28 15:11:41.196 [main] ERROR com.rush.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
+我是谢浓浓：2018-03-28 15:14:24.425 [main] ERROR com.rush.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
+我是谢浓浓：2018-03-28 15:15:36.973 [main] ERROR com.rush.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!

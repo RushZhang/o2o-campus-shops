@@ -53,7 +53,7 @@ public class ImageUtil {
 		logger.debug("current complete addr is :" + PathUtil.getImgBasePath() + relativeAddr);
 		logger.debug("basePath is :" + basePath);
 		try {
-			Thumbnails.of(thumbnailInputStream).size(200, 200).watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath + "/zhaizhai.png")), 0.65f).outputQuality(0.95f)
+			Thumbnails.of(thumbnailInputStream).size(200, 200).watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath + "/zhaizhai.png")), 0.8f).outputQuality(0.95f)
 			.toFile(dest);
 		} catch (IOException exception ) {
 			logger.error(exception.toString());
@@ -94,9 +94,26 @@ public class ImageUtil {
 		return nowTimeStr + rannum;
 	}
 
+	/*
+	 * 如果storePath是文件路径就删除文件
+	 * 如果storePath是目录路径就删除目录下所有文件
+	 */
+	public static void deleteFileOrPath(String  storePath ) {
+		File fileOrPath = new File(PathUtil.getImgBasePath() + storePath);
+		if(fileOrPath.exists()) {
+			if(fileOrPath.isDirectory()) {
+				File files[] = fileOrPath.listFiles();
+				for (int i = 0; i < files.length; i ++) {
+					files[i].delete();
+				}
+			}
+			fileOrPath.delete();
+		}
+	}
+	
 	public static void main(String[] args) throws IOException {
-		Thumbnails.of(new File("/Users/zhangweicheng/Desktop/猪.jpg"))
+		Thumbnails.of(new File("/Users/zhangweicheng/Desktop/熊.jpg"))
 		.size(200, 200).watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath + "/fox.png")), 0.25f).outputQuality(0.8f)
-		.toFile("/Users/zhangweicheng/Desktop/新的图.jpg");
+		.toFile("/Users/zhangweicheng/Desktop/的图.jpg");
 	}
 }

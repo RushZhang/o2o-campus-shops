@@ -103,7 +103,16 @@ public class Shop {
 		public void setShopCategory(ShopCategory shopCategory) {
 			this.shopCategory = shopCategory;
 		}
+		@Override
+		public String toString() {
+			return "Shop [shopId=" + shopId + ", shopName=" + shopName + ", shopDesc=" + shopDesc + ", shopAddr="
+					+ shopAddr + ", phone=" + phone + ", shopImg=" + shopImg + ", priority=" + priority
+					+ ", createTime=" + createTime + ", lastEditTime=" + lastEditTime + ", enableStatus="
+					+ enableStatus + ", advice=" + advice + ", area=" + area + ", owner=" + owner
+					+ ", shopCategory=" + shopCategory + "]";
+		}
 	    
+		
 	    
 
 }

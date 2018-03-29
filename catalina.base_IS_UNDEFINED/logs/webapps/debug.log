@@ -1,15 +1,60 @@
-我是谢浓浓：2018-03-26 16:08:56.498 [main] DEBUG com.rush.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category ORDER BY priority DESC 
-我是谢浓浓：2018-03-26 16:08:56.560 [main] DEBUG com.rush.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-我是谢浓浓：2018-03-26 16:08:56.605 [main] DEBUG com.rush.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
-我是谢浓浓：2018-03-26 16:16:52.342 [main] DEBUG com.rush.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category ORDER BY priority DESC 
-我是谢浓浓：2018-03-26 16:16:52.410 [main] DEBUG com.rush.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-我是谢浓浓：2018-03-26 16:16:52.453 [main] DEBUG com.rush.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
-我是谢浓浓：2018-03-26 16:16:52.469 [main] DEBUG com.rush.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category ORDER BY priority DESC 
-我是谢浓浓：2018-03-26 16:16:52.470 [main] DEBUG com.rush.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-我是谢浓浓：2018-03-26 16:16:52.473 [main] DEBUG com.rush.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
-我是谢浓浓：2018-03-26 16:17:57.194 [main] DEBUG com.rush.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category ORDER BY priority DESC 
-我是谢浓浓：2018-03-26 16:17:57.250 [main] DEBUG com.rush.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-我是谢浓浓：2018-03-26 16:17:57.279 [main] DEBUG com.rush.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
-我是谢浓浓：2018-03-26 16:17:57.298 [main] DEBUG com.rush.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id = ? ORDER BY priority DESC 
-我是谢浓浓：2018-03-26 16:17:57.299 [main] DEBUG com.rush.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 1(Long)
-我是谢浓浓：2018-03-26 16:17:57.305 [main] DEBUG com.rush.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
+我是谢浓浓：2018-03-29 09:00:03.277 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+我是谢浓浓：2018-03-29 09:00:03.379 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 2(Integer), 2(Integer)
+我是谢浓浓：2018-03-29 09:00:03.447 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - <==      Total: 1
+我是谢浓浓：2018-03-29 09:00:03.467 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+我是谢浓浓：2018-03-29 09:00:03.469 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
+我是谢浓浓：2018-03-29 09:00:03.476 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+我是谢浓浓：2018-03-29 09:01:58.942 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+我是谢浓浓：2018-03-29 09:01:58.996 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 0(Integer), 10(Integer)
+我是谢浓浓：2018-03-29 09:01:59.033 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+我是谢浓浓：2018-03-29 09:01:59.048 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+我是谢浓浓：2018-03-29 09:01:59.048 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
+我是谢浓浓：2018-03-29 09:01:59.051 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+我是谢浓浓：2018-03-29 09:02:22.143 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+我是谢浓浓：2018-03-29 09:02:22.204 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 0(Integer), 10(Integer)
+我是谢浓浓：2018-03-29 09:02:22.263 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+我是谢浓浓：2018-03-29 09:02:22.278 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+我是谢浓浓：2018-03-29 09:02:22.279 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
+我是谢浓浓：2018-03-29 09:02:22.282 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+我是谢浓浓：2018-03-29 09:05:24.701 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+我是谢浓浓：2018-03-29 09:05:24.755 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 3(Integer), 3(Integer)
+我是谢浓浓：2018-03-29 09:05:24.792 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - <==      Total: 0
+我是谢浓浓：2018-03-29 09:05:24.805 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+我是谢浓浓：2018-03-29 09:05:24.807 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
+我是谢浓浓：2018-03-29 09:05:24.810 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+我是谢浓浓：2018-03-29 09:06:44.675 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+我是谢浓浓：2018-03-29 09:06:44.733 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 0(Integer), 1(Integer)
+我是谢浓浓：2018-03-29 09:06:44.796 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - <==      Total: 1
+我是谢浓浓：2018-03-29 09:06:44.819 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+我是谢浓浓：2018-03-29 09:06:44.820 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
+我是谢浓浓：2018-03-29 09:06:44.822 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+我是谢浓浓：2018-03-29 09:07:09.716 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+我是谢浓浓：2018-03-29 09:07:09.763 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 3(Integer)
+我是谢浓浓：2018-03-29 09:07:09.804 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+我是谢浓浓：2018-03-29 09:07:09.822 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+我是谢浓浓：2018-03-29 09:07:09.823 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
+我是谢浓浓：2018-03-29 09:07:09.825 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+我是谢浓浓：2018-03-29 09:56:03.307 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+我是谢浓浓：2018-03-29 09:56:03.395 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 3(Integer)
+我是谢浓浓：2018-03-29 09:56:03.492 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+我是谢浓浓：2018-03-29 09:56:03.507 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+我是谢浓浓：2018-03-29 09:56:03.509 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
+我是谢浓浓：2018-03-29 09:56:03.513 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+我是谢浓浓：2018-03-29 09:58:41.975 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+我是谢浓浓：2018-03-29 09:58:42.072 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 3(Integer)
+我是谢浓浓：2018-03-29 09:58:42.124 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+我是谢浓浓：2018-03-29 09:58:42.139 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+我是谢浓浓：2018-03-29 09:58:42.140 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
+我是谢浓浓：2018-03-29 09:58:42.143 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+我是谢浓浓：2018-03-29 09:59:05.822 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+我是谢浓浓：2018-03-29 09:59:05.885 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 5(Integer)
+我是谢浓浓：2018-03-29 09:59:05.950 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - <==      Total: 5
+我是谢浓浓：2018-03-29 09:59:05.963 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+我是谢浓浓：2018-03-29 09:59:05.965 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
+我是谢浓浓：2018-03-29 09:59:05.975 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+我是谢浓浓：2018-03-29 10:02:31.141 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+我是谢浓浓：2018-03-29 10:02:31.194 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 0(Integer), 5(Integer)
+我是谢浓浓：2018-03-29 10:02:31.232 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+我是谢浓浓：2018-03-29 10:02:31.245 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+我是谢浓浓：2018-03-29 10:02:31.245 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
+我是谢浓浓：2018-03-29 10:02:31.247 [main] DEBUG com.rush.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
