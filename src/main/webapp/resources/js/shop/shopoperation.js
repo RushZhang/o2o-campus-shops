@@ -4,20 +4,18 @@
  */
 
 $(function(){
-	var shopId = getQueryString('shopId');
+	var shopId = getQueryString('shopId'); //这个方法在common.js里边
 	var isEdit = shopId ? true : false;  //如果没有shopId就会默认认为这个操作是来注册店铺的
 	var initUrl = '/o2o/shopadmin/getshopinitinfo';
 	var registerShopUrl = '/o2o/shopadmin/registershop';
 	var shopInfoUrl = "/o2o/shopadmin/getshopbyid?shopId=" + shopId;
 	var editShopUrl = "/o2o/shopadmin/modifyshop";
 
-
 	if(!isEdit) {
 		getShopInitInfo();
 	} else {
 		getShopInfo(shopId);
 	}
-
 
 	// 通过店铺Id获取店铺信息
 	function getShopInfo(shopId) {
@@ -116,8 +114,6 @@ $(function(){
 
 		// 将数据提交至后台处理相关操作
 		$.ajax({
-			
-			
 			url : (isEdit ? editShopUrl : registerShopUrl), //判断是编辑还是注册
 			type : 'POST',
 			data: formData,
