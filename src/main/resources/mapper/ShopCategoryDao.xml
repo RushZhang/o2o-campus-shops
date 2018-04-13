@@ -18,12 +18,15 @@
  		FROM
  		tb_shop_category
  		<where>
+ 			<if test = "shopCategoryCondition == null">
+ 				and parent_id is null
+ 			</if>
  			<!-- 这句话可以不选择最根级别的目录 -->
  			<if test="shopCategoryCondition != null">
  				and parent_id is not null
  			</if>
  			<!-- 这里保证了取出来的都是一个父目录下的 -->
- 			<if test="shopCategoryCondition.parent != null">
+ 			<if test="shopCategoryCondition != null and shopCategoryCondition.parent != null">
  				and parent_id = #{shopCategoryCondition.parent.shopCategoryId}
  			</if>
  		</where>

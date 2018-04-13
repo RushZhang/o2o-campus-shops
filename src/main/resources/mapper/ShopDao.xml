@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!DOCTYPE mapper
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
 <mapper namespace="com.rush.o2o.dao.ShopDao">
-
-
 	<resultMap type="com.rush.o2o.entity.Shop" id="shopMap">
 		<id column="shop_id" property="shopId" />
 		<result column="shop_name" property="shopName" />
@@ -35,9 +31,7 @@
 			<result column="name" property="name" />
 		</association>
 	</resultMap>
-
-<!-- 分页查询店铺，可输入的条件有：店铺名(模糊),店铺状态，店铺类别，区域Id,owner -->
-	<select id="queryShopList" resultMap="shopMap"> <!-- 这里就不用写ParamType因为有了@Param -->
+	<select id="queryShopList" resultMap="shopMap">
 		SELECT
 		s.shop_id,
 		s.shop_name,
@@ -99,7 +93,6 @@
 		s.priority DESC
 		LIMIT #{rowIndex},#{pageSize};
 	</select>
-
 	<select id="queryShopCount" resultType="int">
 		SELECT
 		count(1)
@@ -145,7 +138,6 @@
 			s.shop_category_id = sc.shop_category_id
 		</where>
 	</select>
-
 	<select id="queryByShopId" resultMap="shopMap" parameterType="Long">
 		SELECT
 		s.shop_id,
@@ -174,28 +166,22 @@
 		AND
 		s.shop_id = #{shopId}
 	</select>
-
-
-
-	<!-- useGeneratedKeys是指获得自增主键的值 -->
 	<insert id="insertShop" useGeneratedKeys="true" keyColumn="shop_id"
 		keyProperty="shopId">
-		insert into tb_shop(owner_id, area_id,
-		shop_category_id, shop_name,
-		shop_desc, shop_addr, phone, shop_img,
-		priority, create_time,
-		last_edit_time, enable_status, advice)
-		values
-		(#{owner.userId}, #{area.areaId}, #{shopCategory.shopCategoryId},
-		#{shopName}, #{shopDesc}, #{shopAddr}, #{phone}, #{shopImg},
-		#{priority}, #{createTime}, #{lastEditTime}, #{enableStatus},
-		#{advice})
+		INSERT INTO
+		tb_shop(owner_id, area_id, shop_category_id,
+		shop_name, shop_desc, shop_addr,
+		phone, shop_img, priority,
+		create_time, last_edit_time, enable_status,
+		advice)
+		VALUES
+		(#{owner.userId},#{area.areaId},#{shopCategory.shopCategoryId},#{shopName},
+		#{shopDesc},#{shopAddr},#{phone},#{shopImg},#{priority},
+		#{createTime},#{lastEditTime}, #{enableStatus},#{advice})
 	</insert>
-
 	<update id="updateShop" parameterType="com.rush.o2o.entity.Shop">
 		update tb_shop
 		<set>
-			<!-- 这里不需要更新owner -->
 			<if test="shopName != null">shop_name=#{shopName},</if>
 			<if test="shopDesc != null">shop_desc=#{shopDesc},</if>
 			<if test="shopAddr != null">shop_addr=#{shopAddr},</if>
@@ -208,6 +194,6 @@
 			<if test="area != null">area_id=#{area.areaId},</if>
 			<if test="shopCategory != null">shop_category_id=#{shopCategory.shopCategoryId}</if>
 		</set>
-		where shop_id = #{shopId}
+		where shop_id=#{shopId}
 	</update>
 </mapper>
