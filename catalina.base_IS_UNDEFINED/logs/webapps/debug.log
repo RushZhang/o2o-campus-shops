@@ -1,3 +1,21 @@
-我是谢浓浓：2018-04-09 13:35:59.869 [main] DEBUG com.rush.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
-我是谢浓浓：2018-04-09 13:35:59.934 [main] DEBUG com.rush.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-我是谢浓浓：2018-04-09 13:36:00.012 [main] DEBUG com.rush.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
+我是谢浓浓：2018-04-16 16:26:22.673 [main] DEBUG com.rush.o2o.dao.PersonInfoDao.insertPersonInfo - ==>  Preparing: INSERT INTO tb_person_info(name,gender,email,profile_img,user_type, create_time,last_edit_time,enable_status) VALUES (?,?,?,?, ?,?,?,?) 
+我是谢浓浓：2018-04-16 16:26:22.741 [main] DEBUG com.rush.o2o.dao.PersonInfoDao.insertPersonInfo - ==> Parameters: 萨莉亚(String), 女(String), null, null, 1(Integer), 2018-04-16 16:26:21.773(Timestamp), 2018-04-16 16:26:21.773(Timestamp), 1(Integer)
+我是谢浓浓：2018-04-16 16:26:22.766 [main] DEBUG com.rush.o2o.dao.PersonInfoDao.insertPersonInfo - <==    Updates: 1
+我是谢浓浓：2018-04-16 16:26:22.787 [main] DEBUG com.rush.o2o.dao.PersonInfoDao.queryPersonInfoById - ==>  Preparing: SELECT user_id, name, gender, email, profile_img, user_type, create_time, last_edit_time, enable_status FROM tb_person_info WHERE user_id = ? 
+我是谢浓浓：2018-04-16 16:26:22.788 [main] DEBUG com.rush.o2o.dao.PersonInfoDao.queryPersonInfoById - ==> Parameters: 1(Long)
+我是谢浓浓：2018-04-16 16:26:22.823 [main] DEBUG com.rush.o2o.dao.PersonInfoDao.queryPersonInfoById - <==      Total: 1
+我是谢浓浓：2018-04-16 16:27:55.985 [main] DEBUG com.rush.o2o.dao.WechatAuthDao.insertWechatAuth - ==>  Preparing: INSERT INTO tb_wechat_auth(user_id,open_id,create_time) VALUES (?,?,?) 
+我是谢浓浓：2018-04-16 16:27:56.047 [main] DEBUG com.rush.o2o.dao.WechatAuthDao.insertWechatAuth - ==> Parameters: 1(Long), dafahizhfdhaih(String), 2018-04-16 16:27:55.226(Timestamp)
+我是谢浓浓：2018-04-16 16:27:56.070 [main] DEBUG com.rush.o2o.dao.WechatAuthDao.insertWechatAuth - <==    Updates: 1
+我是谢浓浓：2018-04-16 16:27:56.095 [main] DEBUG c.r.o2o.dao.WechatAuthDao.queryWechatInfoByOpenId - ==>  Preparing: SELECT w.wechat_auth_id, w.open_id, w.create_time, p.user_id, p.name, p.gender, p.email, p.profile_img, p.user_type, p.create_time, p.last_edit_time, p.enable_status FROM tb_wechat_auth w LEFT JOIN tb_person_info p ON w.user_id = p.user_id WHERE w.open_id = ? 
+我是谢浓浓：2018-04-16 16:27:56.096 [main] DEBUG c.r.o2o.dao.WechatAuthDao.queryWechatInfoByOpenId - ==> Parameters: dafahizhfdhaih(String)
+我是谢浓浓：2018-04-16 16:27:56.142 [main] DEBUG c.r.o2o.dao.WechatAuthDao.queryWechatInfoByOpenId - <==      Total: 1
+我是谢浓浓：2018-04-16 16:53:24.335 [main] DEBUG com.rush.o2o.dao.PersonInfoDao.insertPersonInfo - ==>  Preparing: INSERT INTO tb_person_info(name,gender,email,profile_img,user_type, create_time,last_edit_time,enable_status) VALUES (?,?,?,?, ?,?,?,?) 
+我是谢浓浓：2018-04-16 16:53:24.393 [main] DEBUG com.rush.o2o.dao.PersonInfoDao.insertPersonInfo - ==> Parameters: 测试一下(String), null, null, null, 1(Integer), 2018-04-16 16:53:24.296(Timestamp), null, 1(Integer)
+我是谢浓浓：2018-04-16 16:53:24.665 [main] DEBUG com.rush.o2o.dao.PersonInfoDao.insertPersonInfo - <==    Updates: 1
+我是谢浓浓：2018-04-16 16:53:24.676 [main] DEBUG com.rush.o2o.dao.WechatAuthDao.insertWechatAuth - ==>  Preparing: INSERT INTO tb_wechat_auth(user_id,open_id,create_time) VALUES (?,?,?) 
+我是谢浓浓：2018-04-16 16:53:24.684 [main] DEBUG com.rush.o2o.dao.WechatAuthDao.insertWechatAuth - ==> Parameters: 3(Long), daheeizhfdhaih(String), 2018-04-16 16:53:24.296(Timestamp)
+我是谢浓浓：2018-04-16 16:53:24.701 [main] DEBUG com.rush.o2o.dao.WechatAuthDao.insertWechatAuth - <==    Updates: 1
+我是谢浓浓：2018-04-16 16:53:24.742 [main] DEBUG c.r.o2o.dao.WechatAuthDao.queryWechatInfoByOpenId - ==>  Preparing: SELECT w.wechat_auth_id, w.open_id, w.create_time, p.user_id, p.name, p.gender, p.email, p.profile_img, p.user_type, p.create_time, p.last_edit_time, p.enable_status FROM tb_wechat_auth w LEFT JOIN tb_person_info p ON w.user_id = p.user_id WHERE w.open_id = ? 
+我是谢浓浓：2018-04-16 16:53:24.743 [main] DEBUG c.r.o2o.dao.WechatAuthDao.queryWechatInfoByOpenId - ==> Parameters: daheeizhfdhaih(String)
+我是谢浓浓：2018-04-16 16:53:24.980 [main] DEBUG c.r.o2o.dao.WechatAuthDao.queryWechatInfoByOpenId - <==      Total: 1
