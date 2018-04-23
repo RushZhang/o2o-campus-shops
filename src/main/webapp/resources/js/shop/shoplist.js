@@ -9,6 +9,8 @@ $(function() {
 				if (data.success) {
 					handleList(data.shopList);
 					handleUser(data.user);
+				} else {
+					window.location.href="/o2o/local/login?usertype=2";
 				}
 			}
 		});

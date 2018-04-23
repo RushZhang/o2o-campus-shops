@@ -120,7 +120,7 @@ public class ShopDetailController {
 			productCondition.setProductName(productName);
 		}
 		// 只允许选出状态为上架的商品
-//		productCondition.setEnableStatus(1);
+		productCondition.setEnableStatus(1);
 		return productCondition;
 	}
 }

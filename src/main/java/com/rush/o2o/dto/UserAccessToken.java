@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * 用户授权token
  * 
- * @author xiangze
+ * @author Rush Zhang
  *
  */
 public class UserAccessToken {

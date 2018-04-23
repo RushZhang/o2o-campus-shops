@@ -156,7 +156,7 @@ public class ShopListController {
 			shopCondition.setShopName(shopName);
 		}
 		// 前端展示的店铺都是审核成功的店铺
-//		shopCondition.setEnableStatus(1);
+		shopCondition.setEnableStatus(1);
 		return shopCondition;
 	}
 }

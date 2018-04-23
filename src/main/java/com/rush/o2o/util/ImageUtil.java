@@ -111,8 +111,7 @@ public class ImageUtil {
 	}
 
 	/**
-	 * 创建目标路径所涉及到的目录，即/home/work/xiangze/xxx.jpg, 那么 home work xiangze
-	 * 这三个文件夹都得自动创建
+	 * 创建目标路径所涉及到的目录
 	 * 
 	 * @param targetAddr
 	 */

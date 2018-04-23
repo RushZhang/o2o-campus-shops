@@ -67,10 +67,11 @@ public class WechatLoginController {
 				openId = token.getOpenId();
 				// 通过access_token和openId获取用户昵称等信息
 				user = WechatUtil.getUserInfo(accessToken, openId);
-				System.out.println(user.toString());
 				log.debug("weixin login user:" + user.toString());
 				request.getSession().setAttribute("openId", openId);
 				auth = wechatAuthService.getWechatAuthByOpenId(openId);
+				PersonInfo personInfo = personInfoService.getPersonInfoById(auth.getPersonInfo().getUserId());
+				request.getSession().setAttribute("user", personInfo);
 			} catch (IOException e) {
 				log.error("error in getUserAccessToken or getUserInfo or findByOpenId: " + e.toString());
 				e.printStackTrace();

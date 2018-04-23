@@ -74,17 +74,20 @@ public class ShopManagementController {
 	@ResponseBody
 	private Map <String, Object> getShopList(HttpServletRequest request){
 		Map<String, Object> modelMap = new HashMap<String, Object>();
+		PersonInfo user = (PersonInfo) request.getSession().getAttribute("user");
 		//先这样设置
-		PersonInfo user = new PersonInfo();
-		user.setUserId(1L);
-		user.setName("Dora");
-		request.getSession().setAttribute("user", user);
-		user = (PersonInfo) request.getSession().getAttribute("user");
+//		PersonInfo user = new PersonInfo();
+//		user.setUserId(1L);
+//		user.setName("Dora");
+//		request.getSession().setAttribute("user", user);
+//		user = (PersonInfo) request.getSession().getAttribute("user");
 		try {
 			Shop shopCondition = new Shop();
 			shopCondition.setOwner(user);
 			ShopExecution se = shopService.getShopList(shopCondition, 0, 100);//一个人创建一百个店铺已经极限了
 			modelMap.put("shopList", se.getShopList());
+			// 列出店铺成功之后，将店铺放入session中作为权限验证依据，即该帐号只能操作它自己的店铺
+			request.getSession().setAttribute("shopList", se.getShopList());
 			modelMap.put("user", user);
 			modelMap.put("success", true);
 		} catch (Exception e) {
